@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>fc barcelona</title>
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+<style>
+
+	
+	*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+	/*aqui empieza el header*/
+	
+	#div_que_tiene_el_recuadro_de_redes_de_arriba{
+		width: 100%;
+		height: 761px;
+		position: absolute;
+		display: flex;
+		justify-content: flex-start;
+		align-content: flex-start;
+		top: 0;
+		left: 0;
+		margin: 50px 0 0 0;
+	}
+	
+	#video_logo{
+		transition: 0.5s;
+		animation: arrowMovement 1.5s infinite;
+	}
+	
+	#video_logo:hover{
+		transform: scale(1.2);
+	}
+	
+	
+	#div_de_cuatro_redes_izquierda_del_header{
+        width: 120px;
+        height: 41px;
+        background: rgba(0,0,0,0.5);
+        display: flex;
+		justify-content: space-between;
+        align-content: center;
+        align-items: center;
+		border-radius: 10px;
+		padding: 0 10px;
+		position: absolute;
+		z-index: 10;
+		margin-left: 50px;
+    }
+	
+	
+	.redes_arriba_izquierda_header{
+        width: 23px;
+        height: 23px;
+        
+    }
+	
+	#insta_header{
+        background: url(imgs/redes/insta.png) no-repeat;
+        background-size: contain;
+    
+    }
+    
+    #face_header{
+        background: url(imgs/redes/face.png) no-repeat;
+        background-size: contain;
+    	z-index: 10;
+    }
+    
+    #twitter_header{
+        background: url(imgs/redes/twitter.png) no-repeat;
+        background-size: contain;
+    
+    }
+    
+    #correo{
+        background: url(redes/correo_2.png) no-repeat;
+        background-size: contain;
+    	height: 16px;
+    }
+	
+	
+	header{
+		width: 100%;
+		height: 761px;
+		flex-grow: 1;
+	}
+	
+	
+	#div_de_figure_de_fondo_de_header{
+		width: 100%;
+		height: 750px;
+		
+	
+	}
+	
+	
+	#video{
+		width: 100%;
+		
+		position: fixed;
+		z-index: -1;
+
+	}
+	
+	#div_de_logo{
+		width: 100%;
+		height: 300px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		
+	}
+	
+	
+	#div_antes_del_logo{
+		width: 400px;
+		height: 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+	
+	#div_antes_del_logo video{
+		width: 400px;
+		height: 300px;
+		z-index: 20;
+		display: flex;
+		align-content: flex-start;
+		align-items: flex-start;
+		margin-top: -80px;
+	}
+	
+	#div_inmediato_a_header{
+		width: 100%;
+		height: 759px;
+		position: relative;
+	}
+	
+	#div_de_figure_de_fondo_de_header figure{
+		width: 100%;
+		height: 900px;
+		background: url();
+		position: absolute;
+	}
+	
+	#div_que_tiene_check_menu_y_nav {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+		display: flex;
+		justify-content: flex-end;
+		overflow: hidden;
+	}
+	
+	#btn-menu{
+		display: none;
+		
+	}
+	
+	#nav_que_tiene_ul_y_li ul{
+		width: 300px;
+		height: 500px;
+		background: #DFDFDF;
+		text-align: end;
+		position: absolute;
+		right: -300px;
+		transition: 0.5s ;
+	}
+	
+	
+	#nav_que_tiene_ul_y_li ul li{
+		width: 300px;
+		height: 60px;
+		background: #DFDFDF;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 0 20px 0 20px;
+		box-sizing: border-box;
+		cursor: pointer;
+	}
+	
+	#nav_que_tiene_ul_y_li ul li:hover{
+		background: #C00418;
+		color: #fff;
+	}
+	
+	
+	#btn-menu:checked ~ #nav_que_tiene_ul_y_li ul{
+		position: absolute;
+		right: 0px;
+		
+	}
+	
+	
+	
+	/*#nav_que_tiene_ul_y_li{
+		position: absolute;
+		right: -300px;
+	}*/
+	
+	#div_que_tiene_icon_menu{
+		width: 100px;
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	
+	.icon-menu{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff !important;
+		width: 30px;
+		height: 30px;
+		text-shadow: 0.1em 0.1em 0.2em #000;
+		
+		font-size: 30px;
+		cursor: pointer;
+		position: absolute;
+		z-index: 1;
+		
+		
+	}
+	#btn-menu{
+		color: #222;
+		font-size: 80px;
+		z-index: 2;
+	}
+	
+	
+	#div_de_redes_arriba_de_menu_desplegable{
+		width: 300px;
+		height: 110px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		box-sizing: border-box;
+		padding-right: 70px;
+	}
+	
+	#div_de_redes_arriba_de_menu_desplegable label{
+		display: flex;
+		justify-content: center;
+		font-size: 33px;
+		width: 30px;
+		cursor: pointer;
+		color: grey;
+	}
+	
+	#div_de_redes_arriba_de_menu_desplegable label:hover{
+		color: #C00418;
+	}
+	
+	
+	
+	.icon-youtube
+	
+	/*aqui termina el header*/
+	
+	
+	
+	
+	
+	/*AQUI EMPIEZA LA SECCION UNO*/
+	
+	
+	
+	#seccion_uno{
+		width: 100%;
+		height: 600px;
+		background: #fff;
+		display: block;
+		
+	}
+	
+	#div_inmediato_a_seccion_uno{
+		width: 100%;
+		height: 600px !important;
+		background: #fff;
+		z-index: 10;
+		display: flex;flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		
+	}
+	
+	
+	#div_que_tiene_titulo_de_seccion_uno{
+		width: 1140px;
+		height: 164px;
+		background: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		//margin-bottom: 
+		
+	}
+	
+	#titulo_grande_p_seccion_uno{
+		font-size: 60px;
+		color: #404040;
+		font-family: 'Lobster', cursive;
+		font-weight: bold;
+		box-sizing: border-box;
+	}
+	
+	
+	#titulo_pequeño_seccion_uno{
+		font-size: 20px;
+		color: #404040;
+		font-family: sans-serif;
+		font-weight: bold;
+	}
+	
+	#div_que_tiene_divs_de_naipes{
+		width: 1170px;
+		height: 400px;
+		background: #fff;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+	}
+	
+	 .class_de_divs_que_tienen_naipes{
+		width: 285px;
+		height:220px;
+		background: #fff;
+		 display: flex;
+		 flex-direction: column;
+		 align-content: center;
+		 align-items: center;
+		 justify-content: space-around;
+		box-shadow:  2px 2px 0.9em #5555;
+			transition: 0.2s;
+	}
+	
+	.class_de_divs_que_tienen_naipes:hover{
+		box-shadow:  2px 2px 2em #5555;
+	}
+	
+	.class_de_divs_que_tienen_naipes p{
+		font-family: sans-serif;
+		font-weight: bold;
+		color: #404040;
+		font-size: 17px;
+		text-align : center;
+	}
+	
+	.class_de_divs_que_tienen_naipes figure{
+		width: 80px;
+		height: 125px;
+		transition: 0.2s;
+		display: flex;
+		
+	}
+	
+	.class_de_divs_que_tienen_naipes figure:hover{
+		box-shadow:  2px 2px 0.9em #5555;
+	}
+	
+	
+	#tervol figure{
+		
+		background: url(naipes/trevoles.jpg) no-repeat;
+		background-size: contain;
+	}
+	
+	#picas figure{
+		
+		background: url(naipes/picas.jpg) no-repeat;
+		background-size: contain;
+	}
+	#rombos figure{
+		
+		background: url(naipes/rombos.jpg) no-repeat;
+		background-size: contain;
+	}
+	
+	#corazones figure{
+		
+		background: url(naipes/corazones.jpg) no-repeat;
+		background-size: contain;
+	}
+	
+	
+	
+	/*AQUI TERMINA LA SECCION UNO*/
+	
+	
+	
+	
+	/*AQUI EMPIEZA LA SECION DOS*/
+	
+	
+	#seccion_dos{
+		width: 100%;
+		height: 1000px;
+		background: blue;
+		
+	}
+	
+	#div_inmediato_a_seccion_dos{
+		width: 100%;
+		height: 1000px;
+		background: blue;
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		align-content: center;
+		align-items: center;
+		
+	}
+	
+	
+	#div_que_tine_titulo_de_bio{
+		width: 1090px;
+		height: 60px;
+		background: yellow;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+	
+	#div_que_tine_titulo_de_bio p{
+		font-size: 30px;
+		font-weight: bold;
+		font-family: 'Lobster', cursive;
+		color: #404040; ;
+	}
+	
+	
+	#div_de_primer_figure figure{
+		width: 1000px;
+		height: 400px;
+		background: url(nino/nino.jpg) no-repeat;
+		background-size: cover;
+	}
+	
+	
+	#video_dos{
+		width: 90px;
+		height: 90px;
+		z-index: 20;
+	}
+	
+	/*AQUI TERMINA LA SECCION DOS*/
+	
+</style>
+</head>
+<body>
+
+	<header>
+		<div id="div_inmediato_a_header">
+			<div id="div_de_figure_de_fondo_de_header">
+			<figure>
+				<video id="video" src="video/tres_final_final.mp4" muted loop autoplay>
+					
+				</video>
+			</figure>
+				
+			</div>
+			
+			<div id="div_de_logo">
+				<div id="div_antes_del_logo">
+					<video id="video_logo" autoplay="autoplay" loop="loop" muted="muted" playsinline="">
+						<source  src="video/webm/dos_logo_para_web_VP9.webm" type="video/webm">
+					</video>
+				</div>
+			</div>
+				<div id="div_que_tiene_el_recuadro_de_redes_de_arriba">
+					<div id="div_de_cuatro_redes_izquierda_del_header">
+                    
+                        <a href="https://www.hola.com/">
+                        <figure id="face_header" class="redes_arriba_izquierda_header">
+                        </figure> 
+                        </a>
+                        	
+                        
+                    
+                    <figure id="insta_header" class="redes_arriba_izquierda_header">
+                        
+                    </figure>
+                    <figure id="twitter_header" class="redes_arriba_izquierda_header">
+                        
+                    </figure>
+                    <figure id="correo" class="redes_arriba_izquierda_header">
+                        
+                    </figure>
+                </div>
+				</div>
+				
+			
+			<div id="div_que_tiene_check_menu_y_nav">
+			
+				<input type="checkbox" id="btn-menu" autocomplete="off">
+				<div id="div_que_tiene_icon_menu">
+					<label for="btn-menu" class="icon-menu"></label>
+				</div>
+				
+				<nav for="menu_a_la_derecha" id="nav_que_tiene_ul_y_li">
+					<ul>
+					
+						<div id="div_de_redes_arriba_de_menu_desplegable">
+							<label class="icon-instagram" id="insta">
+					
+							</label>
+							<label class="icon-youtube" id="youtube">
+					
+							</label>
+							<label class="icon-facebook-squared" id="face">
+					
+							</label>
+							<label class="icon-twitter-squared" id="twitter">
+					
+							</label>
+						</div>
+					
+					
+						<li>
+							INICIO
+						</li>
+						<li>
+							CALENDARIO
+						</li>
+						<li>
+							ESPECTÁCULOS
+						</li>
+						<li>
+							GALERÍA
+						</li>
+						<li>
+							CONTACTO
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	
+	<section id="seccion_uno">
+		<div id="div_inmediato_a_seccion_uno">
+			<div id="div_que_tiene_titulo_de_seccion_uno">
+				<p id="titulo_grande_p_seccion_uno">
+					ESPECTÁCULOS
+				</p>
+				<p id="titulo_pequeño_seccion_uno">
+					#MAGICTIME
+				</p>
+			</div>
+			<div id="div_que_tiene_divs_de_naipes">
+				<div id="tervol" class="class_de_divs_que_tienen_naipes">
+					<figure>
+						
+					</figure>
+					<p>
+						MÁS ALLÁ DE LO MIPOSIBLE
+					</p>
+				</div>
+				<div  id="picas" class="class_de_divs_que_tienen_naipes">
+					<figure>
+						
+					</figure>
+					<p>
+						EL MILAGRO INEXISTENTE
+					</p>
+				</div>
+				<div id="rombos" class="class_de_divs_que_tienen_naipes">
+					<figure>
+						
+					</figure>
+					<p>
+						NO ES CUESTIÓN DE EDADES
+					</p>
+				</div>
+				<div id="corazones" class="class_de_divs_que_tienen_naipes">
+					<figure>
+						
+					</figure>
+					<p>
+						 ADAPTADO A TI
+
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<section id="seccion_dos">
+		<div id="div_inmediato_a_seccion_dos">
+				<div id="div_que_tine_titulo_de_bio">
+					<p>
+						BIOGRAÍA
+					</p>
+				</div>
+				<div id="div_de_primer_figure">
+					<figure>
+						
+					</figure>
+				</div>
+				<div>
+					<p>
+						Detrás del Mago JoQuer está el tomellosero Fernando Salgado, de 25 años. Lleva desde los 9 añitos dedicado a la magia. Sus inicios en el mundo del ilusionismo fueron difíciles. Sí ya en el colegio era discriminado, imaginaos lo que sentió cuando era tan solo un niño de 9 años y fue rechazado por un mago, llamándole "Patoso" en mitad de un acto de magia que se realizó en el autorio de Tomelloso. Siendo así la burla de todos sus amigos y compañeros. 
+					</p>
+					<p>
+						Frustrado y triste lleguó a casa, y les contó a sus progenitores el caso y éstos, a los pocos días le compraron una caja de Magia Borrás. La cogió con tanto entusiasmo que se pasaba días enteros en la habitación practicando, hasta que llego un evento familiar un 11 junio del año 2005 en el cual se estrenó como mago. El mismo confiesa que hizo una actuación pésima. Pero ya se sabe cómo son los padres y familiares, lejos de enmendar la plana aplaudieron a rabiar. Aquello le sentó mal, sabía que no estaban siendo sinceros. Pero gracias a ello decidió hacer algo que le cambio la vida. Se enfrentó a sus miedos cara a cara, con tan solo 9 años se cargó una mochila a los hombres con todos los artilugios de aquella caja de magia borrás y llegó a la conclusión de que la sinceridad estaría en la gente que no le conociera. De esa manera, al día siguiente un domingo 12 de junio del año 2005 se fue a una heladería de una zona muy transitada en Tomelloso y se lanzó por las mesas de la terraza. 
+					</p>
+					<p>
+						Se recorrió durante 5 años las terrazas y bares de su localidad.
+					</p>
+					<a href="https://www.hola.com/">
+						
+						hola
+					</a>
+				</div>
+				<div>
+					<figure>
+						
+					</figure>
+				</div>
+				<video id="video_dos" src="video/avi/dos_logo_para_web.avi" muted loop autoplay>
+					
+				</video>
+		</div>
+		
+	</section>
+	
+	
+</body>
+</html>
